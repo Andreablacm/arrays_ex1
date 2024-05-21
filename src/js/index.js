@@ -79,3 +79,61 @@ const newNumbers = numbers => {
   console.log(`${odd} son impares`);
 };
 newNumbers([1, 23, 32, 4, 5]);
+
+const dniLetter = dniNumber => {
+  const letters = [
+    'T',
+    'R',
+    'W',
+    'A',
+    'G',
+    'M',
+    'Y',
+    'F',
+    'P',
+    'D',
+    'X',
+    'B',
+    'N',
+    'J',
+    'Z',
+    'S',
+    'Q',
+    'V',
+    'H',
+    'L',
+    'C',
+    'K',
+    'E',
+  ];
+  const position = dniNumber % 23;
+
+  console.log(`${dniNumber} ${letters[position]}`);
+};
+
+dniLetter(5967183);
+
+const threeWords = words => {
+  const upperLetters = [];
+  const wordA = words[0];
+  const wordB = words[1];
+  const wordC = words[2];
+  const firstLetterA = wordA.charAt(0);
+  const lastLetterA = wordA.charAt(wordA.length - 1);
+  const firstLetterB = wordB.charAt(0);
+  const lastLetterB = wordB.charAt(wordB.length - 1);
+  const firstLetterC = wordC.charAt(0);
+  const lastLetterC = wordC.charAt(wordC.length - 1);
+  const holi = upperLetters.push(
+    firstLetterA.toUpperCase() +
+      lastLetterA.toUpperCase() +
+      firstLetterB.toUpperCase() +
+      lastLetterB.toUpperCase() +
+      firstLetterC.toUpperCase() +
+      lastLetterC.toUpperCase()
+  );
+
+  console.log(upperLetters);
+};
+
+threeWords(['dulce', 'hogar', 'ñam']);
